@@ -8,7 +8,7 @@ const SEARCH_API =
     "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 function App() {
-
+ 
   const [movies, setMovies ] = useState([]);
   const [searchTerm, setsearchTerm] = useState('');
   useEffect(() => {
@@ -28,7 +28,7 @@ const handleOnSubmit = (e) => {
       .then(data => {
         console.log(data);
         setMovies(data.results);
-      });
+      })
 };
 
 const handleOnChange = (e) => {
